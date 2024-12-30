@@ -8,7 +8,7 @@ This provides a simple panel that displays a calendar and time based on the give
 
 This software is licensed under LGPL. 
 
-Sample image for demo.
+Sample image for demo.\
 <img alt="Calendar demo image" style="width:50%; height:50%;" src="/resources/JCalender-demo.png" title="JCalendar"/>
 
 ## Features
@@ -25,7 +25,7 @@ Sample image for demo.
 
 
 
-> This was previously hosted on sf.net @ [Calendarutil](https://sourceforge.net/projects/calendarutil/)
+> This was previously hosted on sf.net @ [Calendarutil](https://sourceforge.net/projects/calendarutil/)\
 > Any one interested in contributing please drop me an email.
 
 
