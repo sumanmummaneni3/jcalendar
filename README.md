@@ -6,7 +6,7 @@ A simple calendar library based on Java Swings that can be launched any where in
 
 This provides a simple panel that displays a calendar and time based on the given Date object. 
 
-This software is licensed under LGPL. 
+This software is licensed under LGPL. Please check the [License](/LICENSE.md) for more information.
 
 Sample image for demo.\
 <img alt="Calendar demo image" style="width:50%; height:50%;" src="/resources/JCalender-demo.png" title="JCalendar"/>
