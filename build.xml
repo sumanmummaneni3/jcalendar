@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JCalendar" basedir="." default="makejar">
+	<!-- Property definitions -->
+	<property name="src" value="${basedir}/src" />
+	<property name="build" value="${basedir}/classes" />
+	<property name="release" value="${basedir}/release" />
+	<property name="demo" value="${basedir}/demo" />
+	<property file="jcalendar.properties" />
+
+
+	<!-- Delete the folders -->
+	<target name="clean">
+		<delete dir="${release}" />
+		<delete dir="${build}" />
+	</target>
+
+	<!-- Compile the source and copy to classes folder -->
+	<target name="compile" depends="clean">
+		<mkdir dir="${basedir}/classes" />
+		<echo message="Compiling JCalendar source..." />
+		
+		<javac destdir="${build}" srcdir="${src}" source="1.7" />
+		
+		<echo message="Creating release folder..." />
+		<mkdir dir="${basedir}/release" />
+	</target>
+
+	<!-- Making Jar file -->
+	<target name="makejar" depends="compile">
+		<echo message="Creating JCalendar jar..." />
+		<jar jarfile="${release}/jcalendar_${version}.jar" basedir="${build}/" excludes="**/main/**, **/version/**">
+			<manifest>
+				<!-- Who is building this jar? -->
+				<attribute name="Built-By" value="${user.name}" />
+				<!-- Information about the program itself -->
+				<attribute name="Implementation-Vendor" value="JCalendar." />
+				<attribute name="Implementation-Title" value="Calendar util" />
+				<attribute name="Implementation-Version" value="${version}" />
+			</manifest>
+		</jar>
+		<echo message="Removing build folder..."/>
+		<delete dir="${build}"/>
+	</target>
+
+	<!-- Making demo Jar file -->
+	<target name="makeDemoJar" depends="compile">
+		<echo message="Creating demo directory..."/>
+		<delete dir ="${demo}"/>
+		<mkdir dir="${demo}"/>
+		<echo message="Creating Demo Jar..." />
+		<jar jarfile="${demo}/jcalendar-demo.jar" basedir="${build}/" excludes="**/version/**">
+			<manifest>
+				<!-- Who is building this jar? -->
+				<attribute name="Built-By" value="${user.name}" />
+				<!-- Information about the program itself -->
+				<attribute name="Implementation-Vendor" value="JCalendar." />
+				<attribute name="Implementation-Title" value="Calendar util" />
+				<attribute name="Implementation-Version" value="${version}" />
+				<attribute name="Main-Class" value="com.jcalendar.main.Main" />
+			</manifest>
+		</jar>
+		<echo message="Removing build folder..."/>
+		<delete dir="${build}"/>
+		<antcall target="signJar"/>
+	</target>
+	
+	<target name="signJar">
+		<echo message="Sign demo jar for deployment"/>
+		<signjar jar="demo/jcalendar-demo.jar" alias="sourceforge.net" keystore="${basedir}/keystore.jks" storepass="chinni2614"/>
+	</target>
+</project>
