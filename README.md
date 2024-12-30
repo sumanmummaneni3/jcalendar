@@ -6,7 +6,9 @@ A simple calendar library based on Java Swings that can be launched any where in
 
 This provides a simple panel that displays a calendar and time based on the given Date object. 
 
-This softwrae is licensed under LGPL
+This software is licensed under LGPL
+
+![Calendar demo image](/resources/JCalender-demo.png)
 
 ## Features
 - Provide options for setting the time zone before initializing by providing a new constructor.
@@ -14,6 +16,8 @@ This softwrae is licensed under LGPL
 - Provides a Analouge clock display as per the system time zone.
 - Adding options to specify the color for the clock display.
 - Providing options to resize as per the layout instead of having a fixed clock radius.
+
+
 
 
 > This was previously hosted on sf.net @ [Calendarutil](https://sourceforge.net/projects/calendarutil/)
