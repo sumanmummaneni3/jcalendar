@@ -8,7 +8,7 @@ This provides a simple panel that displays a calendar and time based on the give
 
 This software is licensed under LGPL
 
-![Calendar demo image](/resources/JCalender-demo.png)
+<img alt="Calendar demo image" style="width:50%; height:50%;" src="/resources/JCalender-demo.png" title="JCalendar"/>
 
 ## Features
 - Provide options for setting the time zone before initializing by providing a new constructor.
