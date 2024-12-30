@@ -5,6 +5,6 @@ This provides a simple panel that displays a calendar and time based on the give
 
 This softwrae is licensed under LGPL
 
-This was previously hosted on sf.net @ https://sourceforge.net/projects/jcalendar/
+This was previously hosted on sf.net @ https://sourceforge.net/projects/calendarutil/
 
 
